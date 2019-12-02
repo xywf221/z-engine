@@ -47,12 +47,14 @@ Now you can test it with following example:
 <?php
 declare(strict_types=1);
 
+use ZEngine\Core;
 use ZEngine\Reflection\ReflectionClass;
 
 include __DIR__.'/vendor/autoload.php';
 
 final class FinalClass {}
 
+Core::init();
 $refClass = new ReflectionClass(FinalClass::class);
 $refClass->setFinal(false);
 
